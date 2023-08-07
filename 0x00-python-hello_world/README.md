@@ -19,3 +19,7 @@
 | Task:7 | Complete this source code |
 | Task:8 | Complete this source code to print object-oriented programming with Python, followed by a new line. |
 | Task:9 | Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line. |
+| Task:10 | Write a function in C that checks if a singly linked list has a cycle in it. |
+| Task:11 | Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line. |
+| Task:12 | Write a script that compiles a Python script file. |
+| Task:13 | Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode: |
