@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for letter in reversed(range(97, 123)):
-    print("{:c}".format(letter if (letter % 2 == 0) else (letter - 32)), end='')
+for alp in reversed(range(97, 123)):
+    print("{:c}".format(alp if (alp % 2 == 0) else (alp - 32)), end='')
