@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-
-    argmt = len(argv) - 1
+    import sys
+    argmt = len(sys.argv) - 1
 
     if argmt == 0:
         print("{} arguments.".format(argmt))
@@ -13,7 +12,7 @@ if __name__ == "__main__":
 
     if argmt >= 1:
         argmt = 0
-        for arg in argv:
+        for arg in sys.argv:
             if argmt != 0:
                 print("{}: {}".format(argmt, arg))
             argmt += 1
