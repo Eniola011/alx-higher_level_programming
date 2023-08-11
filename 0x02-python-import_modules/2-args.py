@@ -17,4 +17,3 @@ if __name__ == "__main__":
             if argmt != 0:
                 print("{}: {}".format(argmt, arg))
             argmt += 1
-
