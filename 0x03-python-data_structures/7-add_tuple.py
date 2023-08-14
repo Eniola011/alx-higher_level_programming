@@ -25,4 +25,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
     my_tuple = (a1 + b1, a2 + b2)
     return my_tuple
-
