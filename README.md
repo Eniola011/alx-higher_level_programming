@@ -12,4 +12,5 @@
 | Topic:1 | 0x00. Python - Hello, World |
 | Topic:2 | 0x01-python-if_else_loops_functions |
 | Topic:3 | 0x02-python-import_modules |
+| Topic:4 | 0x03. Python - Data Structures: Lists, Tuples |
 
