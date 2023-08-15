@@ -8,42 +8,36 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *begin;
-	int *copy, a = 0, length = 0;
+	listint_t *begin = *head;
+	int *copy = NULL, a = 0, length = 0;
 
-	begin = *head;
-	while (begin != NULL)
+	if (*head == NULL || head == NULL || (*head)->next == NULL)
+	{
+		return (1);
+	}
+	while (begin)
 	{
 		length++;
 		begin = begin->next;
 	}
-	copy = malloc(sizeof(int) * (length));
-	if (copy == NULL)
-	{
-		return (0);
-	}
 
-	a = 0;
+	copy = malloc(sizeof(int) * length);
 	begin = *head;
-	while (begin != NULL)
+	while (begin)
 	{
 		copy[a++] = begin->n;
 		begin = begin->next;
 	}
 
-	a = 0;
-	length--;
-	while (copy[a] == copy[length])
+	for (a = 0; a < length / 2; a++)
 	{
-		if (a == length || a > length)
+		if (copy[a] != copy[length - 1 - a])
 		{
 			free(copy);
-			return (1);
+			return (0);
 		}
-		a++;
-		length--;
 	}
 
 	free(copy);
-	return (0);
+	return (1);
 }
