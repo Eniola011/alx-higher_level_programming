@@ -14,3 +14,4 @@
 | Topic:3 | 0x02-python-import_modules |
 | Topic:4 | 0x03. Python - Data Structures: Lists, Tuples |
 | Topic:5 | 0x04-python-more_data_structures |
+| Topic:6 | 0x05-python-exceptions |
