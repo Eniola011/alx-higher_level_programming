@@ -3,6 +3,7 @@
 
 
 class Node:
+
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -29,6 +30,7 @@ class Node:
 
 
 class SinglyLinkedList:
+
     def __init__(self):
         self.__head = None
 
@@ -50,8 +52,8 @@ class SinglyLinkedList:
 
     def __str__(self):
         val = []
-        temp = self.__head
-        while temp is not None:
-            val.append(str(temp.data))
-            temp = temp.next_node
+        tempnode = self.__head
+        while tempnode is not None:
+            val.append(str(tempnode.data))
+            tempnode = tempnode.next_node
         return ('\n'.join(val))
