@@ -5,6 +5,8 @@ import math
 
 
 class MagicClass:
+    """An area of a circle in magicClass"""
+
     def __init__(self, radius=0):
         """Initialize a magicClass.
         Args:
