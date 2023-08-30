@@ -3,7 +3,14 @@
 
 
 class Node:
+    """A node in singly linked list."""
+
     def __init__(self, data, next_node=None):
+        """Initialize a new Node.
+        Args:
+            data : The value of the new Node.
+            next_node (Node): The next node of the new Node.
+        """
         self.data = data
         self.next_node = next_node
 
@@ -29,7 +36,10 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Singly Linkedlist"""
+
     def __str__(self):
+        """Print singly list"""
         ret = ""
         ptrnode = self.__head
 
@@ -42,9 +52,14 @@ class SinglyLinkedList:
         return ret
 
     def __init__(self):
+        """Initialize a new singly list"""
         self.__head = None
 
     def sorted_insert(self, value):
+        """Insert new node to list
+        Args:
+            value (Node): The new Node to insert.
+        """
         ptrnode = self.__head
 
         while ptrnode is not None:
