@@ -34,6 +34,8 @@ def matrix_divided(matrix, div):
             if not isinstance(value, (int, float)):
                 raise TypeError(error1)
 
+        element = len(row)
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
