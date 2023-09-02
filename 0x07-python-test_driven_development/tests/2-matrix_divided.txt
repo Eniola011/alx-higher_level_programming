@@ -1,0 +1,40 @@
+======================
+Matrix Division Module
+======================
+
+Using ""matrix_divided function""
+---------------------------------
+
+First import the function:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Testing:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    >>> matrix_divided([], 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(["Jesus"], 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([[2, 4], [6, 8], [10, 12]], 4)
+    [[0.5, 1.0], [1.5, 2.0], [2.5, 3.0]]
+
+    >>> matrix_divided([14, 16])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> print(matrix)
+    [[1, 2, 3], [4, 5, 6]]
+
+    >>> matrix_divided([[5, 6], [8, 9]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided([[8, 9, 10], [11, 13]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
