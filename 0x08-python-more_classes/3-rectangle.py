@@ -40,14 +40,14 @@ class Rectangle:
         return (self.width * self.height)
 
     def perimeter(self):
-        if self.width == 0 and self.height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
 
         return (2 * (self.width + self.height))
 
     def __str__(self):
         rectangle = ""
-        if self.width == 0 and self.height == 0:
+        if self.width == 0 or self.height == 0:
             return rectangle
         for i in range(self.height):
             rectangle += ("#" * self.width) + "\n"
