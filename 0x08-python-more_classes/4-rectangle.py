@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 
 A Rectangle Class
@@ -52,3 +53,6 @@ class Rectangle:
         for i in range(self.height):
             rectangle += ("#" * self.width) + "\n"
         return (rectangle[:-1])
+
+    def __repr__(self):
+        return ("Rectangle({:d}, {:d})".format(self.width, self.height))
