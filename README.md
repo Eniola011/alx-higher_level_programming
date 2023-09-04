@@ -17,3 +17,4 @@
 | Topic:5 | 0x05-python-exceptions |
 | Topic:6 | 0x06-python-classes |
 | Topic:7 | 0x07-python-test_driven_development |
+| Topic:8 | 0x08-python-more_classes |
