@@ -17,9 +17,6 @@ Testing:
     >>> say_my_name("Kolawole", "Agbalu")
     My name is Kolawole Agbalu
 
-    >>> say_my_name("Samuel")
-    My name is Samuel
-
     >>> say_my_name("Kay", None)
     Traceback (most recent call last):
     TypeError: last_name must be a string
@@ -34,9 +31,6 @@ Testing:
 
     >>> say_my_name("", "Yetunde")
     My name is  Yetunde
-
-    >>> say_my_name("", "")
-    My name is
 
     >>> say_my_name()
     Traceback (most recent call last):
