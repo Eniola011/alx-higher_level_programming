@@ -45,7 +45,7 @@ Second test the class:
     ['e', 'n', 'i', 'o', 'l', 'a']
 
     >>> my_list.print_sorted()
-    ['a', 'e', 'i', 'l', 'o', 'n']
+    ['a', 'e', 'i', 'l', 'n', 'o']
 
     >>> new_list = MyList()
 

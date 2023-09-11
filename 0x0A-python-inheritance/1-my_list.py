@@ -6,7 +6,7 @@ MyList Module
 """
 
 
-class Mylist(list):
+class MyList(list):
     """ A class that inherits from list
     Args:
         list: list
