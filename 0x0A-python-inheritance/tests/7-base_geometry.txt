@@ -56,3 +56,28 @@ Second test the class:
     Traceback (most recent call last):
 	    ...
     TypeError: age must be an integer
+
+    >>> bg.integer_validator("NaN", float('nan'))
+    Traceback (most recent call last):
+	    ...
+    TypeError: NaN must be an integer
+
+    >>> bg.integer_validator("age", (2,))
+    Traceback (most recent call last):
+	    ...
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", [6])
+    Traceback (most recent call last):
+	    ...
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("name", True)
+    Traceback (most recent call last):
+	    ...
+    TypeError: name must be an integer
+
+    >>> bg.integer_validator("age", {2, 6})
+    Traceback (most recent call last):
+	    ...
+    TypeError: age must be an integer
