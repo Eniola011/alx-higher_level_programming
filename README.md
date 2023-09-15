@@ -20,3 +20,5 @@
 | Topic:8 | 0x08-python-more_classes |
 | Topic:9 | 0x09-python-everything_is_object |
 | Topic:10| 0x0A-python-inheritance |
+| Topic:11 | 0x0B-python-input_output |
+| Topic:12 | 0x0C-python-almost_a_circle |
