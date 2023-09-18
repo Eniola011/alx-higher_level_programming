@@ -6,6 +6,11 @@ Base.py
 """
 
 
+import json
+import csv
+import os.path
+
+
 class Base:
     """ The “base” of all other classes in this project. """
     __nb_objects = 0
@@ -28,3 +33,15 @@ class Base:
             return "[]"
         else:
             return list_dictionaries
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ Writes the JSON string representation of list_objs to a file """
+        filename = "{}.json".format(cls.__name__)
+        with open(filename, 'w') as jfile:
+            if list_objs is None:
+                jfile.write("[]")
+            else:
+                dict_list = [idx.to_dictionary() for idx in list_objs]
+                jstr = json.dumps(dict_list)
+                jfile.write(Base.to_json_string(jstr))
