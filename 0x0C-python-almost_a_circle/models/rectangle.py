@@ -94,19 +94,40 @@ class Rectangle(Base):
                                                        self.x, self.y,
                                                        self.width, self.height)
 
-    def update_0(self, id=None, width=None, height=None, x=None, y=None):
-        args = locals()
-        for k in args.keys():
-            if args[k] is not None and k != "self" and k == "id":
-                self.__dict__[k] = args[k]
-            elif args[k] is not None and k != "self":
-                self.__dict__["_" + type(self).__name__ + "__" + k] = args[k]
-
     def update(self, *args, **kwargs):
-        if args:
-            self.update_0(*args)
-        elif kwargs:
-            self.update_0(**kwargs)
+        if args and len(args) != 0:
+            arg = 0
+            for ag in args:
+                if arg == 0:
+                    if ag is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = ag
+                elif arg == 1:
+                    self.width = arg
+                elif arg == 2:
+                    self.height = arg
+                elif arg == 3:
+                    self.x = arg
+                elif arg == 4:
+                    self.y = arg
+                arg += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
 
     def to_dictionary(self):
         """ Returns the dictionary representation of a 'Rectangle' """
