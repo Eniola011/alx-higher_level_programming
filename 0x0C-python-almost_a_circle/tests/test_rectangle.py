@@ -59,3 +59,5 @@ class test_instantation(unittest.Testcase):
     def test_x(self):
         with self.assertRaises(AttributeError):
             print(Rectangle(5, 5, 0, 0, 1).__x)
+
+    
