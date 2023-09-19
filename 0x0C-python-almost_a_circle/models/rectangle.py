@@ -94,14 +94,19 @@ class Rectangle(Base):
                                                        self.x, self.y,
                                                        self.width, self.height)
 
+    def update_0(self, id=None, width=None, height=None, x=None, y=None):
+        args = locals()
+        for k in args.keys():
+            if args[k] is not None and k != "self" and k == "id":
+                self.__dict__[k] = args[k]
+            elif args[k] is not None and k != "self":
+                self.__dict__["_" + type(self).__name__ + "__" + k] = args[k]
+
     def update(self, *args, **kwargs):
-        if args is not None and len(args) != 0:
-            attr = ['id', 'width', 'height', 'x', 'y']
-            for idx in range(len(args)):
-                setattr(self, attr[idx], args[idx])
-        else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+        if args:
+            self.update_0(*args)
+        elif kwargs:
+            self.update_0(**kwargs)
 
     def to_dictionary(self):
         """ Returns the dictionary representation of a 'Rectangle' """
