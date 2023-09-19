@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-Base.py
+Base Module
 
 """
 
@@ -71,5 +71,38 @@ class Base:
             with open(filename, "r") as jfile:
                 dict_list = Base.from_json_string(jfile.read())
                 return [cls.create(**idx) for idx in dict_list]
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Save a csv file """
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, "w", newline="") as cfile:
+            if list_objs is None or list_objs == []:
+                cfile.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(cfile, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Load a csv file """
+        filename = "{}.csv".format(cls.__name__)
+        try:
+            with open(filename, "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    field_names = ["id", "width", "height", "x", "y"]
+                else:
+                    field_names = ["id", "size", "x", "y"]
+                    dictlist = csv.DictReader(csvfile, fieldnames=fieldnames)
+                    dictlist = [dict([k, int(v)] for k, v in d.items())
+                                for d in dictlist]
+                    return [cls.create(**d) for d in dictlist]
         except IOError:
             return []
