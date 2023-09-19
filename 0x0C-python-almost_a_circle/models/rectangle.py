@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-Rectangle.py
+Rectangle Module
 
 """
 
@@ -82,7 +82,6 @@ class Rectangle(Base):
         if self.height == 0 or self.width == 0:
             print("")
             return
-
         [print("") for y in range(self.y)]
         for hg in range(self.height):
             [print(" ", end="") for x in range(self.x)]
@@ -95,39 +94,13 @@ class Rectangle(Base):
                                                        self.width, self.height)
 
     def update(self, *args, **kwargs):
-        if args and len(args) != 0:
-            arg = 0
-            for ag in args:
-                if arg == 0:
-                    if ag is None:
-                        self.__init__(self.width, self.height, self.x, self.y)
-                    else:
-                        self.id = ag
-                elif arg == 1:
-                    self.width = arg
-                elif arg == 2:
-                    self.height = arg
-                elif arg == 3:
-                    self.x = arg
-                elif arg == 4:
-                    self.y = arg
-                arg += 1
-
-        elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
-                        self.__init__(self.width, self.height, self.x, self.y)
-                    else:
-                        self.id = v
-                elif k == "width":
-                    self.width = v
-                elif k == "height":
-                    self.height = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+        if args is not None and len(args) != 0:
+            attr = ['id', 'width', 'height', 'x', 'y']
+            for idx in range(len(args)):
+                setattr(self, attr[idx], args[idx])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ Returns the dictionary representation of a 'Rectangle' """
