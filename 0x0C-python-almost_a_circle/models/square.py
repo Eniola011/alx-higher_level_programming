@@ -28,22 +28,21 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
 
+    def init_update(self, id=None, size=None, x=None, y=None):
+        if id is not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
     def update(self, *args, **kwargs):
-        if args is not None and len(args) != 0:
-            attr = ['id', 'size', 'x', 'y']
-            for idx in range(len(args)):
-                if attr[idx] == 'size':
-                    setattr(self, 'width', args[idx])
-                    setattr(self, 'height', args[idx])
-                else:
-                    setattr(self, attr[idx], args[idx])
-        else:
-            for key, value in kwargs.items():
-                if key == 'size':
-                    setattr(self, 'width', value)
-                    setattr(self, 'height', value)
-                else:
-                    setattr(self, key, value)
+        if args:
+            self.init_update(*args)
+        elif kwargs:
+            self.init_update(**kwargs)
 
     def to_dictionary(self):
         """ Returns the dictionary representation of a 'Square' """
