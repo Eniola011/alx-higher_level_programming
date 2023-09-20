@@ -18,7 +18,7 @@ class Rectangle(Base):
             height: height of the rectangle
             x: x
             y: y
-    """
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -111,3 +111,4 @@ class Rectangle(Base):
             'x': self.x,
             'y': self.y
         }
+
