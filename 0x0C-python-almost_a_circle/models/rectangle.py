@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-""" rectangle module """
+"""
+
+rectangle module
+
+"""
+
+
 from models.base import Base
 
 
@@ -21,10 +27,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ get width of rectangle """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ set width of rectangle """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -33,10 +41,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """ get height of rectangle """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ set height of rectangle """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -45,10 +55,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ get x of rectangle """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """ set x of rectangle """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -57,10 +69,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ get y of rectangle """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """ set y of rectangle """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -83,11 +97,17 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """ Prints rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
                                                        self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """ update of rectangle
+        Args:
+            *args: argmt
+            **kwargs: keyword argmt
+        """
         if args is not None and len(args) != 0:
             attr = ['id', 'width', 'height', 'x', 'y']
             for idx in range(len(args)):
