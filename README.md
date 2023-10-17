@@ -22,3 +22,4 @@
 | Topic:10| 0x0A-python-inheritance |
 | Topic:11 | 0x0B-python-input_output |
 | Topic:12 | 0x0C-python-almost_a_circle |
+| Topic:13 | 0x0D-SQL_introduction |
