@@ -24,3 +24,4 @@
 | Topic:12 | 0x0C-python-almost_a_circle |
 | Topic:13 | 0x0D-SQL_introduction |
 | Topic:14 | 0x0E-SQL_more_queries |
+| Topic:15 | 0x12-javascript-warm_up |
