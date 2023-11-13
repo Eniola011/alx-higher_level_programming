@@ -6,5 +6,5 @@ if (argmt <= 2) {
 } else if (argmt === 3) {
   console.log('Agrument found');
 } else {
-  console.log('Argument found');
+  console.log('Arguments found');
 }
