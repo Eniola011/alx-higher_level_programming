@@ -17,4 +17,5 @@
 | '6-multi_languages_loop.js' | A script that prints 3 lines: (like 1-multi_languages.js) but by using an array of string and a loop |
 | '7-multi_c.js' | A script that prints x times “C is fun” |
 | '8-square.js' | A script that prints square in 'X' |
+| '9-add.js' | A script that prints the addition of 2 integers |
 |
