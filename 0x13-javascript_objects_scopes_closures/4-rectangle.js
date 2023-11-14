@@ -25,8 +25,8 @@ class Rectangle {
 
   double () {
     // multiplies rectangle by 2
+    this.height *= 2;
     this.width *= 2;
-    this.heigth *= 2;
   }
 }
 
