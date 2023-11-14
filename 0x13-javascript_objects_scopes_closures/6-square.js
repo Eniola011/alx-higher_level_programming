@@ -1,9 +1,16 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
 // A square and inherits from Rectangle of 4-rectangle.js
+
 class Square extends Rectangle {
-  constructor (size) { // The constructor must take 1 argument: size
-    super(size, size); // The constructor of Rectangle must be called (by using super())
+  charPrint (c) {
+    // prints the rectangle using the character c
+    if (c === undefined) { // If c is undefined, use the character X
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.width));
+    }
   }
 }
 
