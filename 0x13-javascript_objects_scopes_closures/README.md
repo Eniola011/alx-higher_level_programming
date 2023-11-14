@@ -9,4 +9,5 @@
 | Filename | Description |
 | -------- | ----------- |
 | '0-rectangle.js' | An empty class Rectangle that defines a rectangle |
+| '1-rectangle.js' | The constructor must take 2 arguments w and h |
 |
