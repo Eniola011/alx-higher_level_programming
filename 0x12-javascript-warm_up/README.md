@@ -19,4 +19,5 @@
 | '8-square.js' | A script that prints square in 'X' |
 | '9-add.js' | A script that prints the addition of 2 integers |
 | '10-factorial.js' | A script that computes and prints a factorial |
+| '11-second_biggest.js' | A script that searches the second biggest integer in the list of arguments. |
 |

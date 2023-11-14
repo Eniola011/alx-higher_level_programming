@@ -1,5 +1,7 @@
 #!/usr/bin/node
-let biggestint = 0, idx, mylist = [];
+let biggestint = 0;
+let idx;
+const mylist = [];
 
 for (idx = 2; idx < process.argv.length; idx++) {
   if (Number.isNaN(parseInt(process.argv[idx])) === false) {
