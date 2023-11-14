@@ -4,4 +4,4 @@ if (Number.isNaN(argmt)) {
   console.log('Not a number');
 } else {
   console.log('My number: ' + argmt);
-} 
+}
