@@ -25,4 +25,4 @@
 | '100-let_me_const.js' | A file that modifies the value of myVar to 333. |
 | '101-call_me_moby.js' | Function that executes x times a function. |
 | '102-add_me_maybe.js' | Function that increments and calls a function. |
-|
+| '103-object_fct.js' | Update the script by adding a new function incr that increments the integer value. |
