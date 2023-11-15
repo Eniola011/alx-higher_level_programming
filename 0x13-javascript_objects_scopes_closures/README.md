@@ -17,4 +17,5 @@
 | '6-square.js' | Create an instance method called charPrint(c) that prints the rectangle using the character c |
 | '7-occurrences.js' | Function returns the number of occurrences in a list |
 | '8-esrever.js' | Function returns the reversed version of a list |
+| '9-logme.js' | Function prints the number of arguments already printed and the new argument value. |
 | 
