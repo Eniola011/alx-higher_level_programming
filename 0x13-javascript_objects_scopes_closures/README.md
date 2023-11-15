@@ -15,4 +15,5 @@
 | '4-rectangle.js' | Create an instance method called rotate() that exchanges the width and the height of the rectangle, Create an instance method called double() that multiples the width and the height of the rectangle by 2 |
 | '5-square.js' | Write a class Square that defines a square and inherits from Rectangle of 4-rectangle.js |
 | '6-square.js' | Create an instance method called charPrint(c) that prints the rectangle using the character c |
+| '7-occurrences.js' | Function returns the number of occurrences in a list |
 | 
