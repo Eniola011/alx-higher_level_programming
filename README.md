@@ -26,3 +26,4 @@
 | Topic:14 | 0x0E-SQL_more_queries |
 | Topic:15 | 0x12-javascript-warm_up |
 | Topic:16 | 0x13-javascript_objects_scopes_closures |
+| Topic:17 | 0x0F-python-object_relational_mapping |
