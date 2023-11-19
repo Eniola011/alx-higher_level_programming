@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-Change of name of a State Object 
+Change of name of a State Object
 from [DB: hbtn_0e_6_usa]
 
 """
