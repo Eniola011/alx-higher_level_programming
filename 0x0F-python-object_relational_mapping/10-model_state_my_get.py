@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-State Object with the name passed as argument 
+State Object with the name passed as argument
 from [DB: hbtn_0e_6_usa]
 
 """
