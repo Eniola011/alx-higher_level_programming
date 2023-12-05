@@ -27,3 +27,4 @@
 | Topic:15 | 0x12-javascript-warm_up |
 | Topic:16 | 0x13-javascript_objects_scopes_closures |
 | Topic:17 | 0x0F-python-object_relational_mapping |
+| Topic:18 | 0x10-python-network_0 |
