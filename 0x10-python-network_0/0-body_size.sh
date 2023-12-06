@@ -1,2 +1,2 @@
 #!/bin/bash
-curl -so /dev/null -w '%{size_download}\n' $1
+curl -sI "$1" | grep -i content-length | awk '{print $2}' | tr -d '\r\n'
