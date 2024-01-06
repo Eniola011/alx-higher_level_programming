@@ -9,7 +9,7 @@ request(process.argv[2], function (error, response, body) {
   JSON.parse(body).results.forEach(film => {
     film.characters.forEach(character => {
       const result = character.includes('/18/');
-      count += (result ? 1: 0);
+      count += (result ? 1 : 0);
     });
   });
   console.log(count);
